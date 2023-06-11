@@ -28,3 +28,6 @@ function closeMenu(){
     var sidemenu = document.getElementById("sidemenu");
     sidemenu.style.right = "-200px";
 }
+function clickLink(s){
+    window.open(s, '_blank');
+}

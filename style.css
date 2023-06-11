@@ -559,6 +559,7 @@ nav i:hover{
     padding: 20px;
     border-radius: 20px;
     height: 400px;
+    margin-top: 20px;
     transition: all 0.5s;
 }
 .project-item:last-of-type{
@@ -578,6 +579,13 @@ nav i:hover{
     position: absolute;
     left: 20px;
     top: 200px;
+    margin-right: 20px;
+}
+.project-info h2{
+    font-size: 20px;
+}
+.project-info{
+    font-size: 13px;
 }
 .project-button{
     display: flex;
@@ -737,6 +745,12 @@ form input, form textarea{
     }
     .project-item img{
         width: 160px;
+    }
+    .project-item h2{
+        font-size: 15px;
+    }
+    .project-item span{
+        font-size: 11px;
     }
     .project-info{
         top: 140px;
