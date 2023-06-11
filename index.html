@@ -485,9 +485,9 @@
                 </div>
                 <div class="contact-form">
                     <form name="submit-to-google-sheet">
-                        <input type="text" name="name" placeholder="Your Name">
-                        <input type="email" name="email" placeholder="Your E-mail">
-                        <textarea name="msg" rows="6" placeholder="Your Message"></textarea>
+                        <input type="text" name="Name" placeholder="Your Name">
+                        <input type="email" name="Email" placeholder="Your E-mail">
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                         <button type="submit" class="submit-button">Submit</button>
                     </form>
                     <span id="msg"></span>
@@ -498,5 +498,27 @@
             <p>Copyright © Manab. Made by <i class="fa-solid fa-code"></i> Manab Seal.</p>
         </div>
     </div>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzxwj_L9Gf-CoGREoNglUyqEpR9Mq8dkKnIY-fb3DoZ14kTEG3aasrR0VH2FV0PswXK/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },3000)
+                form.reset()
+            })
+            .catch(error => {
+                msg.innerHTML = "Some error occurred"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },3000)
+            })
+        })
+    </script>
 </body>
 </html>
