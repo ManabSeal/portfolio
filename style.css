@@ -873,7 +873,7 @@ form input, form textarea{
         align-items: center;
     }
     .image-container img{
-        width: 100%;
+        width: 55%;
     }
     .info{
         margin-top: 20px;
@@ -1002,7 +1002,7 @@ form input, form textarea{
         font-size: 13px;
     }
     .image-container img{
-        width: 90%;
+        width: 70%;
     }
     .service-item{
         flex-basis: 100%;
